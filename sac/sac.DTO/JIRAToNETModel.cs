@@ -1,15 +1,11 @@
-﻿namespace SAC
+﻿namespace sac
 {
-    public class JIRAToNETModel
+    public class JiraToNetModel
     {
         public int Id { get; set; }
-
-        public string ProjectName { get; set; }
-
-        public string IssueType { get; set; }
-
-        public string IssueDescription { get; set; }
-
-        public string Priority { get; set; }
+        public string Description { get; set; }
+        public string Title { get; set; }
+        public string Assignee { get; set; }
+        public string Status { get; set; }
     }
 }

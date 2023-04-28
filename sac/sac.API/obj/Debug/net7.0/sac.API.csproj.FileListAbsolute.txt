@@ -50,3 +50,6 @@ C:\Amar\Debug\Apps\1\153\202304263420\sac\sac.API\obj\Debug\net7.0\ref\sac.API.d
 D:\Projects\Microsoft\API\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\153\202304270345\sac\sac.API\obj\Debug\net7.0\sac.API.dll
 D:\Projects\Microsoft\API\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\153\202304270345\sac\sac.API\obj\Debug\net7.0\refint\sac.API.dll
 D:\Projects\Microsoft\API\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\153\202304270345\sac\sac.API\obj\Debug\net7.0\sac.API.pdb
+D:\Projects\Microsoft\API\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\153\202304283429\sac\sac.API\obj\Debug\net7.0\sac.API.dll
+D:\Projects\Microsoft\API\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\153\202304283429\sac\sac.API\obj\Debug\net7.0\refint\sac.API.dll
+D:\Projects\Microsoft\API\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\153\202304283429\sac\sac.API\obj\Debug\net7.0\sac.API.pdb

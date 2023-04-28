@@ -1,22 +1,44 @@
-﻿using SAC.DTO;
-
-namespace SAC.Service
+﻿namespace sac
 {
-    public interface IJIRAToNETRepository
+    using sac.DTO;
+    public interface IJiraToNetRepository
     {
-        // Get All Records
-        Task<IEnumerable<JIRAToNETModel>> GetAllRecordsAsync();
+        Task<JiraToNetModel> GetJiraToNetAsync(int id);
+        Task<IEnumerable<JiraToNetModel>> GetJiraToNetsAsync();
+        Task<JiraToNetModel> AddJiraToNetAsync(JiraToNetModel jiraToNet);
+        Task<JiraToNetModel> UpdateJiraToNetAsync(JiraToNetModel jiraToNet);
+        Task DeleteJiraToNetAsync(int id);
+    }
 
-        // Get Record By Id
-        Task<JIRAToNETModel> GetRecordByIdAsync(int id);
+    public class JiraToNetRepository : IJiraToNetRepository
+    {
+        public async Task<JiraToNetModel> GetJiraToNetAsync(int id)
+        {
+            // code to retrieve JiraToNetModel object
+            return jiraToNet;
+        }
 
-        // Create Record
-        Task<bool> CreateRecordAsync(JIRAToNETModel model);
+        public async Task<IEnumerable<JiraToNetModel>> GetJiraToNetsAsync()
+        {
+            // code to retrieve all JiraToNetModel objects
+            return jiraToNets;
+        }
 
-        // Update Record
-        Task<bool> UpdateRecordAsync(JIRAToNETModel model);
+        public async Task<JiraToNetModel> AddJiraToNetAsync(JiraToNetModel jiraToNet)
+        {
+            // code to add JiraToNetModel object
+            return jiraToNet;
+        }
 
-        // Delete Record
-        Task<bool> DeleteRecordAsync(int id);
+        public async Task<JiraToNetModel> UpdateJiraToNetAsync(JiraToNetModel jiraToNet)
+        {
+            // code to update JiraToNetModel object
+            return jiraToNet;
+        }
+
+        public async Task DeleteJiraToNetAsync(int id)
+        {
+            // code to delete JiraToNetModel object
+        }
     }
 }

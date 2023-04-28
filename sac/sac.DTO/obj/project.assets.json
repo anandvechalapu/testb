@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Microsoft\\API\\dotnet_service\\Application.API\\SacralAI.Code.Scheduler\\bin\\Debug\\Apps\\1\\153\\202304270345\\sac\\sac.DTO\\sac.DTO.csproj",
+      "projectUniqueName": "D:\\Projects\\Microsoft\\API\\dotnet_service\\Application.API\\SacralAI.Code.Scheduler\\bin\\Debug\\Apps\\1\\153\\202304283429\\sac\\sac.DTO\\sac.DTO.csproj",
       "projectName": "sac.DTO",
-      "projectPath": "D:\\Projects\\Microsoft\\API\\dotnet_service\\Application.API\\SacralAI.Code.Scheduler\\bin\\Debug\\Apps\\1\\153\\202304270345\\sac\\sac.DTO\\sac.DTO.csproj",
+      "projectPath": "D:\\Projects\\Microsoft\\API\\dotnet_service\\Application.API\\SacralAI.Code.Scheduler\\bin\\Debug\\Apps\\1\\153\\202304283429\\sac\\sac.DTO\\sac.DTO.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Microsoft\\API\\dotnet_service\\Application.API\\SacralAI.Code.Scheduler\\bin\\Debug\\Apps\\1\\153\\202304270345\\sac\\sac.DTO\\obj\\",
+      "outputPath": "D:\\Projects\\Microsoft\\API\\dotnet_service\\Application.API\\SacralAI.Code.Scheduler\\bin\\Debug\\Apps\\1\\153\\202304283429\\sac\\sac.DTO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",

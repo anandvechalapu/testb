@@ -1,79 +1,81 @@
-﻿using SAC.API;
-using SAC.DTO;
-using SAC.Service;
+﻿using sac.DTO;
+using sac.Service;
 using Microsoft.AspNetCore.Mvc;
 
-namespace SAC.API
+namespace sac.API
 {
     [Route("api/[controller]")]
     [ApiController]
     public class JIRAToNETController : ControllerBase
     {
-        private readonly JIRAToNETService _jiraToNETService;
+        private readonly JIRAToNETService _jIRAToNETService;
 
-        public JIRAToNETController(JIRAToNETService jiraToNETService)
+        public JIRAToNETController(JIRAToNETService jIRAToNETService)
         {
-            _jiraToNETService = jiraToNETService;
+            _jIRAToNETService = jIRAToNETService;
         }
 
+        // GET: api/JIRAToNET
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<JIRAToNETModel>>> GetAllRecordsAsync()
+        public async Task<ActionResult<IEnumerable<JIRAToNETDTO>>> GetJIRAToNET()
         {
-            var records = await _jiraToNETService.GetAllRecordsAsync();
-            return Ok(records);
+            return await _jIRAToNETService.GetJIRAToNET();
         }
 
+        // GET: api/JIRAToNET/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<JIRAToNETModel>> GetRecordByIdAsync(int id)
+        public async Task<ActionResult<JIRAToNETDTO>> GetJIRAToNET(int id)
         {
-            var record = await _jiraToNETService.GetRecordByIdAsync(id);
-            if (record == null)
+            var jIRAToNETDTO = await _jIRAToNETService.GetJIRAToNET(id);
+
+            if (jIRAToNETDTO == null)
             {
                 return NotFound();
             }
 
-            return Ok(record);
+            return jIRAToNETDTO;
         }
 
-        [HttpPost]
-        public async Task<ActionResult<JIRAToNETModel>> CreateRecordAsync([FromBody] JIRAToNETModel model)
-        {
-            var isSuccess = await _jiraToNETService.CreateRecordAsync(model);
-            if (!isSuccess)
-            {
-                return BadRequest();
-            }
-
-            return CreatedAtAction(nameof(GetRecordByIdAsync), new { id = model.Id }, model);
-        }
-
+        // PUT: api/JIRAToNET/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
+        // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateRecordAsync(int id, [FromBody] JIRAToNETModel model)
+        public async Task<IActionResult> PutJIRAToNET(int id, JIRAToNETDTO jIRAToNETDTO)
         {
-            if (id != model.Id)
+            if (id != jIRAToNETDTO.Id)
             {
                 return BadRequest();
             }
 
-            var isSuccess = await _jiraToNETService.UpdateRecordAsync(model);
-            if (!isSuccess)
-            {
-                return NotFound();
-            }
+            await _jIRAToNETService.UpdateJIRAToNET(jIRAToNETDTO);
 
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteRecordAsync(int id)
+        // POST: api/JIRAToNET
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
+        // more details see https://aka.ms/RazorPagesCRUD.
+        [HttpPost]
+        public async Task<ActionResult<JIRAToNETDTO>> PostJIRAToNET(JIRAToNETDTO jIRAToNETDTO)
         {
-            var isSuccess = await _jiraToNETService.DeleteRecordAsync(id);
-            if (!isSuccess)
+            await _jIRAToNETService.CreateJIRAToNET(jIRAToNETDTO);
+
+            return CreatedAtAction("GetJIRAToNET", new { id = jIRAToNETDTO.Id }, jIRAToNETDTO);
+        }
+
+        // DELETE: api/JIRAToNET/5
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<JIRAToNETDTO>> DeleteJIRAToNET(int id)
+        {
+            var jIRAToNETDTO = await _jIRAToNETService.GetJIRAToNET(id);
+            if (jIRAToNETDTO == null)
             {
                 return NotFound();
             }
 
-            return NoContent();
+            await _jIRAToNETService.DeleteJIRAToNET(jIRAToNETDTO);
+
+            return jIRAToNETDTO;
         }
     }
 }
